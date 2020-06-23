@@ -6,6 +6,11 @@ class CashRegister
     @@items = []
   end
 
+
+  def items
+    @@items
+  end 
+  
   attr_accessor :total, :discount, :last_transaction
 
   def add_item(title, price, quantity = 1)
@@ -23,10 +28,6 @@ class CashRegister
     else 
       "There is no discount to apply."
     end
-  end
-
-  def items
-    @@items
   end
 
   def void_last_transaction
